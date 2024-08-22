@@ -59,7 +59,7 @@ function Container() {
 
   return (
     
-    <div className="absolute rounded-[20px] flex flex-cols-3 md:flex-nowrap flex-wrap z-30  border-inherit bg-inherit min-w-60 md:h-screen  h-full w-screen ">
+    <div className="absolute rounded-[20px] flex flex-cols-3 md:flex-nowrap flex-wrap z-30  border-inherit bg-inherit min-w-60 md:h-screen   h-full  w-screen ">
       <Cards 
         tempData={humidityData ? `${humidityData}%` : "Loading..."} // Pass humidity data to Cards component
         title="Humidity"
@@ -70,12 +70,13 @@ function Container() {
         tempData={tempData ? `${tempData} °C ` : "Loading..."} // Pass temp data to Cards component
         title="Temperature"
         description="Real-time humidity data streamed directly from our IoT sensors, keeping you informed and in control, anytime, anywhere!"
-        url="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSJ6tF8z-RMIXd_DF4TkAgTg4oIVuNsQ3aAmVRGaYKaQm8vTP96"
+        url="https://cdn-icons-png.flaticon.com/512/566/566675.png"
       />
       <Cards
         tempData={moistureData ? `${moistureData}%` : "Loading..."} // Pass moisture data to Cards component
         title="Plant Moisture"
         description="Real-time humidity data streamed directly from our IoT sensors, keeping you informed and in control, anytime, anywhere!"
+        url="https://cdn-icons-png.flaticon.com/512/8809/8809827.png"
       />
     </div>
    
