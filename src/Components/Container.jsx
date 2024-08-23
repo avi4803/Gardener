@@ -47,12 +47,10 @@ function Container() {
     const dataRef = firebaseRef(database, "moisture");
     onValue(dataRef, (snapshot) => {
       const data = snapshot.val();
-      if (!!data) {
+      
         setmoistureData(data); // Update the state with the humidity data
         console.log(data);
-      } else {
-        console.log("Data not found");
-      }
+      
     });
   }, []);
 
@@ -73,7 +71,7 @@ function Container() {
         url="https://cdn-icons-png.flaticon.com/512/566/566675.png"
       />
       <Cards
-        tempData={moistureData ? `${moistureData}%` : "Loading..."} // Pass moisture data to Cards component
+        tempData={`${moistureData}%`} // Pass moisture data to Cards component
         title="Plant Moisture"
         description="Real-time Plant Moisture data streamed directly "
         url="https://cdn-icons-png.flaticon.com/512/8809/8809827.png"
